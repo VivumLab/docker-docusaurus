@@ -15,4 +15,3 @@ yarn install &
 msg "Updated version: $(yarn docusaurus --version)"
 
 exit 0
-

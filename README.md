@@ -87,7 +87,7 @@ docker run -d --name=docusaurus \
 -e AUTO_UPDATE=true \
 -e WEBSITE_NAME=Awesometic \
 -e TEMPLATE=classic \
--e RUN_MODE=development \ 
+-e RUN_MODE=development \
 awesometic/docusaurus
 ```
 
