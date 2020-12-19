@@ -1,3 +1,10 @@
+### [1.0.3](https://github.com/VivumLab/docker-docusaurus/compare/v1.0.2...v1.0.3) (2020-12-19)
+
+
+### Bug Fixes
+
+* improv init.sh ([4b176ef](https://github.com/VivumLab/docker-docusaurus/commit/4b176ef69d458a58c030e721e44176114d9cb6c8))
+
 ### [1.0.2](https://github.com/VivumLab/docker-docusaurus/compare/v1.0.1...v1.0.2) (2020-12-19)
 
 
