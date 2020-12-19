@@ -22,7 +22,11 @@ jobs:
         uses: crazy-max/ghaction-docker-meta@v1
         with:
           images: vivumlab/docusaurus # list of Docker images to use as base name for tags
-          tag-sha: true # add git short SHA as Docker tag
+          tag-semver: |
+            {{version}}
+            {{major}}.{{minor}}
+            {{major}}
+          tag-sha: false # add git short SHA as Docker tag
       - name: Get VERSION
         run: |
           echo "::set-output name=get_version::$(cat VERSION)"
