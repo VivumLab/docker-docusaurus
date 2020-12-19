@@ -1,9 +1,9 @@
 FROM node:15.3-alpine3.12
-LABEL maintainer="Denis Evers <docusaurus@evers.sh>" \
+LABEL maintainer="Denis Evers <docusaurus@vivumlab.xyz>" \
       description="Lightweight Docusaurus container with Node.js 15 based on Alpine Linux 3.12"
 
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.12/main/ \
-    bash bash-completion supervisor \
+    bash bash-completion curl supervisor \
     autoconf automake build-base libtool nasm
 
 # Environments
@@ -27,6 +27,9 @@ COPY config/supervisord-prod.conf /etc/supervisor/conf.d/supervisord-prod.conf
 
 # Set files permission
 RUN chmod a+x /init.sh /auto_update_job.sh
+
+HEALTHCHECK --interval=30s --timeout=3s \
+  CMD curl -f http://localhost/ || exit 1
 
 EXPOSE 80
 VOLUME [ "/docusaurus" ]
