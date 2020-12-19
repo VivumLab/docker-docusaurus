@@ -22,7 +22,8 @@ WORKDIR /docusaurus
 ADD config/init.sh /
 ADD config/auto_update_crontab.txt /
 ADD config/auto_update_job.sh /
-COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY config/supervisord-dev.conf /etc/supervisor/conf.d/supervisord-dev.conf
+COPY config/supervisord-prod.conf /etc/supervisor/conf.d/supervisord-prod.conf
 
 # Set files permission
 RUN chmod a+x /init.sh /auto_update_job.sh
