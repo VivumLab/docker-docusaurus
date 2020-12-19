@@ -1,3 +1,10 @@
+### [1.0.2](https://github.com/VivumLab/docker-docusaurus/compare/v1.0.1...v1.0.2) (2020-12-19)
+
+
+### Bug Fixes
+
+* improve docker publish ([4b3f1a3](https://github.com/VivumLab/docker-docusaurus/commit/4b3f1a39e0f8fdcd1aec3ed72f231d992dcd9187))
+
 ### [1.0.1](https://github.com/VivumLab/docker-docusaurus/compare/v1.0.0...v1.0.1) (2020-12-19)
 
 
