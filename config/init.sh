@@ -43,7 +43,6 @@ if [[ ! -d "$DOCU_PATH"/"$WEBSITE_NAME" ]]; then
     msg "Install docusaurus..."
     npx @docusaurus/init@latest init "$WEBSITE_NAME" "$TEMPLATE" &
     [[ "$!" -gt 0 ]] && wait $!
-    ln -s "$DOCU_PATH"/"$WEBSITE_NAME" "$WEB_SRC_PATH"
     chown -R "$TARGET_UID":"$TARGET_GID" "$DOCU_PATH"
 else
     msg "Docusaurus configuration already exists in the target directory $DOCU_PATH"
@@ -54,23 +53,14 @@ if [[ ! -d "$DOCU_PATH"/"$WEBSITE_NAME"/node_modules ]]; then
     cd "$DOCU_PATH"/"$WEBSITE_NAME"
     yarn install &
     [[ "$!" -gt 0 ]] && wait $!
-    cd ..
-    ln -sf "$DOCU_PATH"/"$WEBSITE_NAME" "$WEB_SRC_PATH"
+    cd "$DOCU_PATH"
     chown -R "$TARGET_UID":"$TARGET_GID" "$DOCU_PATH"
 else
     msg "Node modules already exist in $DOCU_PATH/$WEBSITE_NAME/node_modules"
 fi
 
-#msg "Will run this Node service as $RUN_MODE mode..."
-#if [[ "$RUN_MODE" == "production" ]]; then
-#    msg "Build current sources..."
-#    cd "$WEB_SRC_PATH" || msg "There's no directory named $WEB_SRC_PATH. Program will be closed." && exit
-#    yarn build &
-#elif [[ "$RUN_MODE" != "production" ]] && [[ "$RUN_MODE" != "development" ]]; then
-#    msg "This "$RUN_MODE" mode is unknown as a default Node.js service mode. You should do know what you do."
-#    yarn "$RUN_MODE" &
-#fi
-#[[ "$!" -gt 0 ]] && wait $!
+cd "$DOCU_PATH"
+ln -sf "$DOCU_PATH"/"$WEBSITE_NAME" "$WEB_SRC_PATH"
 
 msg "Start supervisord to start Docusaurus..."
 if [[ "$RUN_MODE" == "development" ]]; then

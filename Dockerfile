@@ -1,5 +1,5 @@
 FROM node:15.3-alpine3.12
-LABEL maintainer="Deokgyu Yang <secugyu@gmail.com>" \
+LABEL maintainer="Denis Evers <docusaurus@evers.sh>" \
       description="Lightweight Docusaurus container with Node.js 15 based on Alpine Linux 3.12"
 
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.12/main/ \
