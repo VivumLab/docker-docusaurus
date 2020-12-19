@@ -1,3 +1,10 @@
+### [1.0.4](https://github.com/VivumLab/docker-docusaurus/compare/v1.0.3...v1.0.4) (2020-12-19)
+
+
+### Bug Fixes
+
+* add healthcheck to Dockerfile ([3053685](https://github.com/VivumLab/docker-docusaurus/commit/305368587cf5330005650fc177d81aab904c2fca))
+
 ### [1.0.3](https://github.com/VivumLab/docker-docusaurus/compare/v1.0.2...v1.0.3) (2020-12-19)
 
 
