@@ -30,4 +30,3 @@ RUN chmod a+x /init.sh /auto_update_job.sh
 EXPOSE 80
 VOLUME [ "/docusaurus" ]
 ENTRYPOINT [ "/init.sh" ]
-
