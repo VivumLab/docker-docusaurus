@@ -1,7 +1,5 @@
 # docker-docusaurus
 
-![](https://img.shields.io/microbadger/image-size/vivumlab/docusaurus)
-![](https://img.shields.io/microbadger/layers/vivumlab/docusaurus)
 ![](https://img.shields.io/docker/pulls/vivumlab/docusaurus)
 ![](https://img.shields.io/docker/stars/vivumlab/docusaurus)
 
