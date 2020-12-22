@@ -1,6 +1,13 @@
 FROM node:15.3-alpine3.12
+
 LABEL maintainer="Denis Evers <docusaurus@vivumlab.xyz>" \
-      description="Lightweight Docusaurus container with Node.js 15 based on Alpine Linux 3.12"
+      description="Lightweight Docusaurus container with Node.js 15 based on Alpine Linux 3.12" \
+      org.label-schema.name="Docusaurus v2" \
+      org.label-schema.description="Lightweight Docusaurus v2 container with Node.js 15 based on Alpine Linux 3.12" \
+      org.label-schema.url="https://github.com/VivumLab/docker-docusaurus/#readme" \
+      org.label-schema.vcs-url="https://github.com/VivumLab/docker-docusaurus" \
+      org.label-schema.vendor="VivumLab" \
+      org.label-schema.schema-version="1.0"
 
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/v3.12/main/ \
     bash bash-completion curl supervisor \
