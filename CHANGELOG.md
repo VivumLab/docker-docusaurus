@@ -1,3 +1,10 @@
+### [1.0.5](https://github.com/VivumLab/docker-docusaurus/compare/v1.0.4...v1.0.5) (2020-12-22)
+
+
+### Bug Fixes
+
+* add labels to dockerfile ([01c6b4a](https://github.com/VivumLab/docker-docusaurus/commit/01c6b4a8383ccecd25ad9cead255318f84bae9bf))
+
 ### [1.0.4](https://github.com/VivumLab/docker-docusaurus/compare/v1.0.3...v1.0.4) (2020-12-19)
 
 
