@@ -63,7 +63,7 @@ You can just dry run it out with the following command. The '--rm' option remove
 docker run -it --rm \
 -p 80:80 \
 -v /where/docusaurus/config/locates:/docusaurus \
-awesometic/docusaurus
+vivumlab/docusaurus
 ```
 
 Then you have made a website accessible using 80 port with,
@@ -82,10 +82,10 @@ docker run -d --name=docusaurus \
 -e TARGET_UID=1000 \
 -e TARGET_GID=1000 \
 -e AUTO_UPDATE=true \
--e WEBSITE_NAME=Awesometic \
+-e WEBSITE_NAME=vivumlab \
 -e TEMPLATE=classic \
 -e RUN_MODE=development \
-awesometic/docusaurus
+vivumlab/docusaurus
 ```
 
 Then when the container runs, just let your browser browses:
