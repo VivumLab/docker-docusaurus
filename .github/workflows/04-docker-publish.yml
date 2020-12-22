@@ -1,7 +1,6 @@
 name: "Publish to Registry"
 
 on:
-  workflow_dispatch:
   release:
     types:
       - released
